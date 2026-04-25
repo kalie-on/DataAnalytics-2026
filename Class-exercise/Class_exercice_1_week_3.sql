@@ -117,5 +117,29 @@ SELECT companyName, Country, city
 FROM Customers
 ORDER BY country ASC, CompanyName ASC;
 
-SELECT 
+USE northwind;
 
+SELECT o.orderID, c.companyname AS 'customer', o.orderdate
+FROM Orders o
+JOIN customer c ON o.customerID = c.customerID
+ORDER BY O.orderdate DESC
+LIMIT 5;
+
+SELECT Oderid, companyname, orderdate
+FROM orders
+JOIN customer USING (CUSTOMER)
+ORDER BY orderdate
+LIMIT 5;
+
+SELECT p.productname, c.categoryname, p.unitprice
+FROM Products 
+INNER JOIN categiories c ON p.categoryID = c.categoryID
+ORDER BY c.categoryname, p.productname
+LIMIT 6;
+
+SELECT c.CompanyName, COUNT(o.OrderID) AS 'Order Count'
+FROM customers c
+left join Orders o ON c.customerID = o.customerID
+GROUP BY c.companyName
+ORDER BY 'Order Count' ASC
+LIMIT 5;
