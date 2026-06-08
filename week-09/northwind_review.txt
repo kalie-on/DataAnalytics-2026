@@ -1,0 +1,132 @@
+# Northwind Review
+
+## Customers Table
+
+### CustomerID
+- Represents the unique ID for each customer.
+- Example values: ALFKI, ANATR, BERGS
+
+### CompanyName
+- Represents the customer's company name.
+- Example values: Alfreds Futterkiste
+
+### City
+- Represents the city where the customer is located.
+- Example values: Berlin, London, Paris
+
+## Orders Table
+
+### OrderID
+- Represents the unique order number.
+- Example values: 10248, 10249, 10250
+
+### OrderDate
+- Represents the date the order was placed.
+- Example values: 1997-07-04, 1998-01-15
+
+### CustomerID
+- Represents the customer who placed the order.
+- Example values: ALFKI, VINET
+
+## Products Table
+
+### ProductID
+- Represents the unique product ID.
+- Example values: 1, 2, 3
+
+### ProductName
+- Represents the product name.
+- Example values computer
+
+### UnitPrice
+- Represents the selling price of the product.
+- Example values or prices
+
+
+
+Table: Customers
+
+Column: CustomerID
+Represents: the unique code for each customer. Example: ALFKI, ANATR.
+Primary key: Yes.
+Foreign key: No.
+Valuable for Power BI: Yes, because it connects customers to orders.
+Name appropriate: Yes.
+Better name: No change needed.
+Power BI data type: Text.
+Calculations: Count customers, orders by customer, sales by customer.
+
+Column: CompanyName
+Represents: the customer or company name. Example: Alfreds Futterkiste.
+Primary key: No.
+Foreign key: No.
+Valuable for Power BI: Yes, useful for customer reports.
+Name appropriate: Yes, but “Customer Name” may be clearer.
+Better name: Customer Name.
+Power BI data type: Text.
+Calculations: Sales by customer, top customers.
+
+Table: Orders   
+
+Column: OrderID
+Represents: the unique number for each order.
+Primary key: Yes.
+Foreign key: No.
+Valuable for Power BI: Yes, used to count orders.
+Name appropriate: Yes.
+Better name: No change needed.
+Power BI data type: Whole number.
+Calculations: Total orders, orders by month.
+
+Column: CustomerID
+Represents: the customer who placed the order.
+Primary key: No.
+Foreign key: Yes, it connects to Customers.
+Valuable for Power BI: Yes, it connects orders to customers.
+Name appropriate: Yes.
+Better name: No change needed.
+Power BI data type: Text.
+Calculations: Orders by customer, revenue by customer.
+
+Column: OrderDate
+Represents: the date the order was placed.
+Primary key: No.
+Foreign key: No.
+Valuable for Power BI: Yes, useful for time analysis.
+Name appropriate: Yes.
+Better name: No change needed.
+Power BI data type: Date.
+Calculations: Monthly sales, yearly sales, order trends.
+
+Table: Products
+
+Column: ProductID
+Represents: the unique number for each product.
+Primary key: Yes.
+Foreign key: No.
+Valuable for Power BI: Yes, it connects products to order details.
+Name appropriate: Yes.
+Better name: No change needed.
+Power BI data type: Whole number.
+Calculations: Product counts, sales by product.
+
+Column: ProductName
+Represents: the name of the product. Example: Chai, Chang.
+Primary key: No.
+Foreign key: No.
+Valuable for Power BI: Yes, useful for product reports.
+Name appropriate: Yes.
+Better name: Product Name.
+Power BI data type: Text.
+Calculations: Top-selling products, revenue by product.
+
+Column: UnitPrice
+Represents: the price of one unit of the product.
+Primary key: No.
+Foreign key: No.
+Valuable for Power BI: Yes, useful for revenue calculations.
+Name appropriate: Yes.
+Better name: Unit Price.
+Power BI data type: Decimal number / Currency.
+Calculations: Revenue, average price, price comparison.
+
